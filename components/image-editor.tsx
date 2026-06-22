@@ -39,9 +39,19 @@ export function ImageEditor({ uploadId, imageUrl, onComplete }: ImageEditorProps
       setCvReady(true);
       return;
     }
-    setLoadingStep("Loading AI engine...");
+        setLoadingStep("Loading AI engine...");
     const script = document.createElement("script");
+    // Use preconnect for faster load
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "script";
+    link.href = "/opencv/opencv.js";
+    document.head.appendChild(link);
+
     script.src = "/opencv/opencv.js";
+    script.async = true;
+    script.defer = true;
+
     script.async = true;
     script.onload = () => {
       const checkReady = setInterval(() => {
