@@ -48,7 +48,7 @@ export function ImageEditor({ uploadId, imageUrl, onComplete }: ImageEditorProps
     link.href = "/opencv/opencv.js";
     document.head.appendChild(link);
 
-    script.src = "/opencv/opencv.js";
+        script.src = "https://cdn.jsdelivr.net/npm/@techstark/opencv-js@4.12.0/dist/opencv.js";
     script.async = true;
     script.defer = true;
 
