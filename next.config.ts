@@ -12,11 +12,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "res.cloudinary.com" },
     ],
   },
-
   // Performance optimizations
-  experimental: {
+    experimental: {
     optimizePackageImports: ["lucide-react", "date-fns"],
   },
+
+  // Compression
+  compress: true,
+
 
   // Compression
   compress: true,
@@ -27,10 +30,6 @@ const nextConfig: NextConfig = {
   // Powered-by header (security + small perf gain)
   poweredByHeader: false,
 
-  // Compress images automatically
-  experimental: {
-    optimizePackageImports: ["lucide-react", "date-fns"],
-  },
 };
 
 export default nextConfig;
