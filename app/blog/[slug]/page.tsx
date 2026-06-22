@@ -81,9 +81,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </header>
 
           <div
-            className="prose prose-invert prose-lg max-w-none text-zinc-300"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+  className="blog-prose max-w-none"
+  dangerouslySetInnerHTML={{ __html: contentHtml }}
+/>
+
 
           <div className="mt-16 p-6 bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-2xl text-center">
             <h3 className="text-xl font-bold text-white mb-2">Try Watermark Remover Pro</h3>
